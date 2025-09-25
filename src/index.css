@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system para Pistache Lucrativo - Preto elegante + Rosa vibrante */
+
+@layer base {
+  :root {
+    /* Backgrounds - Preto elegante */
+    --background: 240 6% 4%;
+    --foreground: 0 0% 98%;
+
+    /* Cards com contraste sutil */
+    --card: 240 6% 6%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 6% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Rosa vibrante para CTAs e destaques */
+    --primary: 328 100% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Cinza escuro para elementos secundários */
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 0 0% 90%;
+
+    /* Muted com tom mais suave */
+    --muted: 240 6% 10%;
+    --muted-foreground: 240 5% 65%;
+
+    /* Accent dourado para pistache */
+    --accent: 45 100% 70%;
+    --accent-foreground: 240 6% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 15%;
+    --input: 240 6% 12%;
+    --ring: 328 100% 54%;
+
+    /* Gradientes elegantes */
+    --gradient-hero: linear-gradient(135deg, hsl(240 6% 4%), hsl(240 6% 8%));
+    --gradient-card: linear-gradient(145deg, hsl(240 6% 6%), hsl(240 6% 10%));
+    --gradient-primary: linear-gradient(135deg, hsl(328 100% 54%), hsl(310 100% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(45 100% 70%), hsl(35 100% 65%));
+
+    /* Shadows com rosa suave */
+    --shadow-primary: 0 10px 30px -10px hsl(328 100% 54% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(240 6% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(328 100% 54% / 0.2);
+
+    --radius: 12px;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Dark mode mantém o mesmo tema escuro */
+  .dark {
+    --background: 240 6% 4%;
+    --foreground: 0 0% 98%;
+    --card: 240 6% 6%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 6% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 328 100% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 6% 12%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 240 6% 10%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 45 100% 70%;
+    --accent-foreground: 240 6% 4%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 15%;
+    --input: 240 6% 12%;
+    --ring: 328 100% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero button com gradiente rosa */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-pink-500 text-white font-bold py-4 px-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg;
+  }
+
+  /* Button secundário */
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground font-semibold py-3 px-6 rounded-lg border border-border hover:bg-secondary/80 transition-all duration-200;
+  }
+
+  /* Card de produto */
+  .product-card {
+    @apply bg-gradient-to-br from-card to-card/80 rounded-xl border border-border/50 p-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 backdrop-blur-sm;
+  }
+
+  /* Animação de fade in */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Glow effect para elementos importantes */
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* ==== ANIMAÇÕES ==== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== ESTILOS DO CARROSSEL ==== */
+
+/* Esconde a barra de rolagem no mobile */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ajusta o container do carrossel para ser scroll horizontal suave */
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+}
+.carousel-container > * {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+}
