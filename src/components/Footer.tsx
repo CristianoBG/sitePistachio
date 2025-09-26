@@ -73,7 +73,7 @@ export const Footer = () => {
           {/* Copyright */}
           <div className="text-sm text-muted-foreground">
             <p className="mb-2">
-              Todos os direitos reservados © 2025 | Bake Me
+              Todos os direitos reservados © 2025 | Sensação Saborosa
             </p>
             <p>
               CNPJ: 21.283.156/0001-05
