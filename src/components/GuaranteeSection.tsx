@@ -24,11 +24,11 @@ export const GuaranteeSection = () => {
       description: "Receba tudo na hora, 24h por dia"
     }
   ];
+const handleFinalCTA = () => {
+  window.location.href =
+    'https://checkout.appsnappay.com/checkout/cmg01iyxs000y20attbwumx7s?offer=5TQCL6Q';
+};
 
-  const handleFinalCTA = () => {
-    // Redireciona para checkout ou scroll para produtos
-    alert('Redirecionando para o checkout final...');
-  };
 
   return (
     <section className="py-20 px-4">
@@ -105,14 +105,20 @@ export const GuaranteeSection = () => {
             <div className="text-lg opacity-90">ou 12x de R$ 8,33</div>
           </div>
           
-          <Button
-            size="lg"
-            className="bg-white text-primary hover:bg-gray-100 font-bold text-xl px-12 py-6 shadow-2xl"
-            onClick={handleFinalCTA}
-          >
-            💰 Garantir Minha Vaga Agora
-          </Button>
-          
+    <a
+  href="https://checkout.appsnappay.com/checkout/cmg01iyxs000y20attbwumx7s?offer=5TQCL6Q"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button
+    size="lg"
+    className="bg-white text-primary hover:bg-gray-100 font-bold text-xl px-12 py-6 shadow-2xl"
+  >
+    💰 Garantir Minha Vaga Agora
+  </Button>
+</a>
+
+
           <p className="text-sm mt-4 opacity-75">
             🔒 Compra protegida | ⭐ Garantia de satisfação | 🚀 Acesso imediato
           </p>

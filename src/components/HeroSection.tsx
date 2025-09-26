@@ -4,11 +4,8 @@ import { Shield, Star } from 'lucide-react';
 
 export const HeroSection = () => {
   const handleMainCTA = () => {
-    // Scroll para a seção de produtos ou checkout direto
-    const productsSection = document.getElementById('products');
-    if (productsSection) {
-      productsSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href =
+      'https://checkout.appsnappay.com/checkout/cmg01iyxs000y20attbwumx7s?offer=5TQCL6Q';
   };
 
   return (
@@ -41,16 +38,22 @@ export const HeroSection = () => {
           </span>
         </p>
 
-        {/* CTA Principal */}
-        <div className="animate-fade-in mb-8">
-          <Button
-            size="lg"
-            className="btn-hero text-xl px-12 py-6 glow-primary"
-            onClick={handleMainCTA}
-          >
-            💰 Quero Lucrar Agora
-          </Button>
-        </div>
+      {/* CTA Principal */}
+<div className="animate-fade-in mb-8">
+  <a
+    href="https://checkout.appsnappay.com/checkout/cmg01iyxs000y20attbwumx7s?offer=5TQCL6Q"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Button
+      size="lg"
+      className="btn-hero text-xl px-12 py-6 glow-primary"
+    >
+      💰 Quero Lucrar Agora
+    </Button>
+  </a>
+</div>
+
 
         {/* Badge de confiança */}
         <div className="animate-fade-in flex items-center justify-center gap-4 text-sm text-muted-foreground">
