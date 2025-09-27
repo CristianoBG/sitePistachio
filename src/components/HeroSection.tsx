@@ -34,7 +34,7 @@ export const HeroSection = () => {
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in max-w-2xl mx-auto">
           Todas as receitas liberadas por apenas
           <span className="text-primary font-bold text-3xl md:text-4xl block mt-2">
-            R$ 99,99
+            R$ 49,99
           </span>
         </p>
 

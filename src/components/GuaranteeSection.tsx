@@ -101,8 +101,8 @@ const handleFinalCTA = () => {
           
           <div className="mb-6">
             <div className="text-sm opacity-75 mb-2">De R$ 593,99 por apenas</div>
-            <div className="text-5xl font-bold mb-2">R$ 99,99</div>
-            <div className="text-lg opacity-90">ou 12x de R$ 8,33</div>
+            <div className="text-5xl font-bold mb-2">R$ 49,99</div>
+            <div className="text-lg opacity-90">ou 12x de R$ 4,16</div>
           </div>
           
     <a

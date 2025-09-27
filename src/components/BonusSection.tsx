@@ -7,14 +7,14 @@ export const BonusSection = () => {
       title: "Lista de Fornecedores Testados",
       description:
         "Acesso exclusivo à nossa rede de fornecedores confiáveis + cupons de desconto especiais para ingredientes premium",
-      value: "R$ 99,99",
+      value: "R$ 49,99",
     },
     {
       icon: <BookOpen className="h-8 w-8 text-accent" />,
       title: "Receitas Secretas Exclusivas",
       description:
         "Pudim de Pistache, Sorvete Artesanal, Blondie, Cookie Gourmet, Cheesecake Basco e Bombom Rocher",
-      value: "R$ 99,99",
+      value: "R$ 49,99",
     },
   ];
 
@@ -90,7 +90,7 @@ export const BonusSection = () => {
             >
               De <span className="line-through opacity-80">R$ 593,99</span>
               <br />
-              Por apenas R$ 99,99
+              Por apenas R$ 49,99
             </a>
 
             <div className="mt-4 text-accent font-semibold">
